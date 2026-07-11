@@ -1,0 +1,139 @@
+/* ==========================================================================
+   RTL Support - Gross Theme
+   ========================================================================== */
+
+[dir="rtl"] body,
+.rtl body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Lists */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding: 0 1.5em 0 0;
+}
+
+/* Blockquotes */
+[dir="rtl"] blockquote {
+  border-left: none;
+  border-right: 4px solid var(--theme-color-text_link);
+  padding: 1.5em 2em 1.5em 1.5em;
+}
+
+/* Sidebar */
+[dir="rtl"] .sidebar_right .content {
+  float: right;
+}
+
+[dir="rtl"] .sidebar_right .sidebar {
+  float: left;
+}
+
+[dir="rtl"] .sidebar_left .content {
+  float: left;
+}
+
+[dir="rtl"] .sidebar_left .sidebar {
+  float: right;
+}
+
+/* Navigation */
+[dir="rtl"] .menu_main_nav_area .sub-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .menu_main_nav_area .sub-menu .sub-menu {
+  left: auto;
+  right: 100%;
+}
+
+/* Mobile Menu */
+[dir="rtl"] .menu_mobile {
+  right: auto;
+  left: -320px;
+}
+
+[dir="rtl"] .menu_mobile.menu_mobile_open {
+  left: 0;
+}
+
+[dir="rtl"] .menu_mobile_nav .sub-menu a {
+  padding-left: 1.5em;
+  padding-right: 3em;
+}
+
+/* Breadcrumbs */
+[dir="rtl"] .breadcrumbs_delimiter {
+  transform: scaleX(-1);
+}
+
+/* Post meta */
+[dir="rtl"] .post_meta_item + .post_meta_item::before {
+  margin: 0 0 0 0.5em;
+}
+
+/* Services accent */
+[dir="rtl"] .sc_services_item_accent {
+  border-left: none;
+  border-right: 4px solid var(--theme-color-text_link);
+  padding: 25px 30px 25px 25px;
+}
+
+/* Testimonials creative */
+[dir="rtl"] .sc_testimonials_item_creative .sc_testimonials_item_inner {
+  border-left: none;
+  border-right: 4px solid var(--theme-color-text_link);
+  padding: 30px 35px 30px 30px;
+}
+
+/* Sticky socials */
+[dir="rtl"] .sticky_socials {
+  left: auto;
+  right: 0;
+}
+
+/* Slider arrows */
+[dir="rtl"] .sc_slider_arrow_prev {
+  left: auto;
+  right: -24px;
+}
+
+[dir="rtl"] .sc_slider_arrow_next {
+  right: auto;
+  left: -24px;
+}
+
+/* Float alignments */
+[dir="rtl"] .alignleft {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+[dir="rtl"] .alignright {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+/* More link */
+[dir="rtl"] .more-link::after {
+  transform: scaleX(-1);
+}
+
+/* Services callouts connector */
+[dir="rtl"] .sc_services_item_callouts .sc_services_item_connector {
+  left: auto;
+  right: 29px;
+}
+
+/* Bubble testimonial arrow */
+[dir="rtl"] .sc_testimonials_item_bubble .sc_testimonials_item_bubble_wrap::after {
+  left: auto;
+  right: 40px;
+}
+
+/* Pagination */
+[dir="rtl"] .page_numbers {
+  direction: ltr;
+}

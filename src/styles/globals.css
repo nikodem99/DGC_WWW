@@ -1,0 +1,806 @@
+/* ==========================================================================
+   Global Styles - Gross Theme (WordPress to Next.js)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colors - Main */
+  --theme-color-bg_color: #ffffff;
+  --theme-color-bd_color: #e0e0e0;
+  --theme-color-text: #333333;
+  --theme-color-text_light: #999999;
+  --theme-color-text_dark: #1a1a1a;
+  --theme-color-text_link: #c2a476;
+  --theme-color-text_hover: #a88a5e;
+  --theme-color-text_link2: #80d572;
+  --theme-color-text_link3: #ddb837;
+  --theme-color-inverse_text: #ffffff;
+  --theme-color-inverse_light: rgba(255,255,255,0.7);
+  --theme-color-inverse_dark: #ffffff;
+
+  /* Colors - Alternate */
+  --theme-color-alter_bg_color: #f5f5f5;
+  --theme-color-alter_bd_color: #e0e0e0;
+  --theme-color-alter_text: #333333;
+  --theme-color-alter_link: #c2a476;
+  --theme-color-alter_hover: #a88a5e;
+
+  /* Colors - Extra (dark sections, footer) */
+  --theme-color-extra_bg_color: #1a1a1a;
+  --theme-color-extra_bd_color: #333333;
+  --theme-color-extra_text: #b7b7b7;
+  --theme-color-extra_link: #c2a476;
+  --theme-color-extra_hover: #a88a5e;
+
+  /* Layout */
+  --theme-var-page_width: 1170px;
+  --theme-var-page_boxed_extra: 60px;
+  --theme-var-sidebar_prc: 0.28;
+  --theme-var-sidebar_gap_prc: 0.04;
+  --theme-var-sidebar_width: 328px;
+  --theme-var-sidebar_gap_width: 47px;
+  --theme-var-sidebar_proportional: 1;
+  --theme-var-rad_koef: 1;
+
+  /* Fonts - Paragraph */
+  --theme-font-p_font-family: var(--font-montserrat, 'Montserrat'), sans-serif;
+  --theme-font-p_font-size: 1rem;
+  --theme-font-p_line-height: 1.76em;
+  --theme-font-p_font-weight: 400;
+
+  /* Fonts - Headings */
+  --theme-font-h_font-family: var(--font-montserrat, 'Montserrat'), sans-serif;
+  --theme-font-h1_font-size: 3rem;
+  --theme-font-h2_font-size: 2.4rem;
+  --theme-font-h3_font-size: 1.765rem;
+  --theme-font-h4_font-size: 1.412rem;
+  --theme-font-h5_font-size: 1.176rem;
+  --theme-font-h6_font-size: 1rem;
+  --theme-font-h_font-weight: 700;
+  --theme-font-h_line-height: 1.2em;
+  --theme-font-h_letter-spacing: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Reset / Normalize
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--theme-font-p_font-family);
+  font-size: var(--theme-font-p_font-size);
+  font-weight: var(--theme-font-p_font-weight);
+  line-height: var(--theme-font-p_line-height);
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-bg_color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Base Typography
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--theme-font-h_font-family);
+  font-weight: var(--theme-font-h_font-weight);
+  line-height: var(--theme-font-h_line-height);
+  letter-spacing: var(--theme-font-h_letter-spacing);
+  color: var(--theme-color-text_dark);
+  margin: 0 0 0.65em;
+  padding: 0;
+}
+
+h1 { font-size: var(--theme-font-h1_font-size); }
+h2 { font-size: var(--theme-font-h2_font-size); }
+h3 { font-size: var(--theme-font-h3_font-size); }
+h4 { font-size: var(--theme-font-h4_font-size); }
+h5 { font-size: var(--theme-font-h5_font-size); }
+h6 { font-size: var(--theme-font-h6_font-size); }
+
+p {
+  margin: 0 0 1.5em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+a {
+  color: var(--theme-color-text_link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--theme-color-text_hover);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--theme-color-text_hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--theme-color-text_link);
+  outline-offset: 2px;
+}
+
+
+/* --------------------------------------------------------------------------
+   Lists
+   -------------------------------------------------------------------------- */
+ul,
+ol {
+  margin: 0 0 1.5em;
+  padding: 0 0 0 1.5em;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+dl {
+  margin: 0 0 1.5em;
+}
+
+dt {
+  font-weight: var(--theme-font-h_font-weight);
+  margin-bottom: 0.25em;
+}
+
+dd {
+  margin: 0 0 1em 1.5em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Blockquotes
+   -------------------------------------------------------------------------- */
+blockquote {
+  margin: 1.5em 0;
+  padding: 1.5em 2em;
+  border-left: 4px solid var(--theme-color-text_link);
+  background-color: var(--theme-color-alter_bg_color);
+  font-style: italic;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  color: var(--theme-color-text_dark);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.75em;
+  font-size: 0.85em;
+  font-style: normal;
+  color: var(--theme-color-text_light);
+}
+
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1.5em;
+}
+
+th,
+td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border: 1px solid var(--theme-color-bd_color);
+}
+
+th {
+  font-weight: var(--theme-font-h_font-weight);
+  color: var(--theme-color-text_dark);
+  background-color: var(--theme-color-alter_bg_color);
+}
+
+thead th {
+  border-bottom-width: 2px;
+}
+
+
+/* --------------------------------------------------------------------------
+   Horizontal Rule
+   -------------------------------------------------------------------------- */
+hr {
+  height: 0;
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid var(--theme-color-bd_color);
+}
+
+
+/* --------------------------------------------------------------------------
+   Images & Media
+   -------------------------------------------------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0 0 1.5em;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  color: var(--theme-color-text_light);
+  font-style: italic;
+}
+
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   Code & Preformatted
+   -------------------------------------------------------------------------- */
+code,
+kbd,
+samp {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background-color: var(--theme-color-alter_bg_color);
+  border-radius: calc(3px * var(--theme-var-rad_koef));
+}
+
+pre {
+  margin: 0 0 1.5em;
+  padding: 1.5em;
+  overflow-x: auto;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.6;
+  background-color: var(--theme-color-alter_bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  border-radius: calc(3px * var(--theme-var-rad_koef));
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Form Elements
+   -------------------------------------------------------------------------- */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.8em 1em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: var(--theme-font-p_font-size);
+  font-weight: var(--theme-font-p_font-weight);
+  line-height: var(--theme-font-p_line-height);
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--theme-color-text_link);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  display: inline-block;
+  padding: 0.8em 2.5em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--theme-color-text_hover);
+  border-color: var(--theme-color-text_hover);
+  color: var(--theme-color-inverse_text);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+fieldset {
+  margin: 0 0 1.5em;
+  padding: 1em;
+  border: 1px solid var(--theme-color-bd_color);
+}
+
+legend {
+  padding: 0 0.5em;
+  font-weight: var(--theme-font-h_font-weight);
+}
+
+
+/* --------------------------------------------------------------------------
+   Layout Structure
+   -------------------------------------------------------------------------- */
+.body_wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.page_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.content_wrap {
+  max-width: var(--theme-var-page_width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page_content_wrap {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Column System
+   -------------------------------------------------------------------------- */
+.columns_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.columns_wrap > * {
+  padding: 0 15px;
+}
+
+.columns_fluid {
+  flex-wrap: nowrap;
+}
+
+.column-1_1 { width: 100%; }
+.column-1_2 { width: 50%; }
+.column-1_3 { width: 33.333%; }
+.column-2_3 { width: 66.666%; }
+.column-1_4 { width: 25%; }
+.column-3_4 { width: 75%; }
+.column-1_5 { width: 20%; }
+.column-2_5 { width: 40%; }
+.column-3_5 { width: 60%; }
+.column-4_5 { width: 80%; }
+.column-1_6 { width: 16.666%; }
+.column-5_6 { width: 83.333%; }
+
+
+/* --------------------------------------------------------------------------
+   SC Layouts Columns
+   -------------------------------------------------------------------------- */
+.sc_layouts_column {
+  display: flex;
+  align-items: center;
+}
+
+.sc_layouts_column_align_left {
+  justify-content: flex-start;
+}
+
+.sc_layouts_column_align_center {
+  justify-content: center;
+}
+
+.sc_layouts_column_align_right {
+  justify-content: flex-end;
+}
+
+.sc_layouts_column_fluid {
+  flex: 1;
+}
+
+.sc_layouts_item {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   Color Schemes
+   -------------------------------------------------------------------------- */
+.scheme_dark {
+  color: var(--theme-color-extra_text);
+  background-color: var(--theme-color-extra_bg_color);
+}
+
+.scheme_dark h1,
+.scheme_dark h2,
+.scheme_dark h3,
+.scheme_dark h4,
+.scheme_dark h5,
+.scheme_dark h6 {
+  color: var(--theme-color-inverse_text);
+}
+
+.scheme_dark a {
+  color: var(--theme-color-extra_link);
+}
+
+.scheme_dark a:hover {
+  color: var(--theme-color-extra_hover);
+}
+
+.scheme_light {
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-bg_color);
+}
+
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.sc_button,
+.theme_button {
+  display: inline-block;
+  padding: 1em 2.5em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sc_button:hover,
+.theme_button:hover {
+  background-color: var(--theme-color-text_hover);
+  border-color: var(--theme-color-text_hover);
+  color: var(--theme-color-inverse_text);
+}
+
+.sc_button_style_filled {
+  background-color: var(--theme-color-text_link);
+  color: var(--theme-color-inverse_text);
+}
+
+.sc_button_style_filled:hover {
+  background-color: var(--theme-color-text_hover);
+  border-color: var(--theme-color-text_hover);
+}
+
+.sc_button_style_outline {
+  background-color: transparent;
+  color: var(--theme-color-inverse_text);
+  border-color: var(--theme-color-inverse_text);
+}
+
+.sc_button_style_outline:hover {
+  background-color: var(--theme-color-inverse_text);
+  color: var(--theme-color-text_dark);
+}
+
+.sc_button_style_simple {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--theme-color-text_link);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sc_button_style_simple:hover {
+  color: var(--theme-color-text_hover);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.more-link {
+  display: inline-block;
+  padding: 0.7em 2em;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  transition: all 0.3s ease;
+}
+
+.more-link:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  word-wrap: normal;
+}
+
+.accent_color,
+.accent_color a {
+  color: var(--theme-color-text_link);
+}
+
+.accent2_color,
+.accent2_color a {
+  color: var(--theme-color-text_link2);
+}
+
+.accent3_color,
+.accent3_color a {
+  color: var(--theme-color-text_link3);
+}
+
+.text_center { text-align: center; }
+.text_left { text-align: left; }
+.text_right { text-align: right; }
+
+
+/* --------------------------------------------------------------------------
+   Skip Links
+   -------------------------------------------------------------------------- */
+.skip-link,
+.gross_skip_link {
+  position: fixed;
+  top: -100%;
+  left: 6px;
+  z-index: 100000;
+  padding: 0.8em 1.5em;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  outline: none;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus,
+.gross_skip_link:focus {
+  top: 6px;
+  color: var(--theme-color-inverse_text);
+}
+
+
+/* --------------------------------------------------------------------------
+   SC Layouts Flex Helpers
+   -------------------------------------------------------------------------- */
+.sc_layouts_flex {
+  display: flex;
+}
+
+.sc_layouts_columns_middle {
+  align-items: center;
+  justify-content: center;
+}
+
+.sc_layouts_row {
+  position: relative;
+}
+
+.sc_layouts_row_type_normal {
+  /* Normal row type - standard padding */
+}
+
+.sc_layouts_row_type_compact .content_wrap {
+  /* Compact row - less vertical space */
+}
+
+
+/* --------------------------------------------------------------------------
+   Social Icons Base
+   -------------------------------------------------------------------------- */
+.socials_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.social_item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  font-size: 1em;
+  color: inherit;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Title
+   -------------------------------------------------------------------------- */
+.section_title {
+  font-size: var(--theme-font-h3_font-size);
+  font-weight: var(--theme-font-h_font-weight);
+  margin-bottom: 1.5em;
+  color: var(--theme-color-text_dark);
+}
+
+
+/* --------------------------------------------------------------------------
+   Mobile Menu Body Lock
+   -------------------------------------------------------------------------- */
+body.menu_mobile_open {
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Sticky Socials
+   -------------------------------------------------------------------------- */
+.sticky_socials {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sticky_social_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--theme-color-text_link);
+  color: var(--theme-color-inverse_text);
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.sticky_social_item:hover {
+  background: var(--theme-color-text_hover);
+  color: var(--theme-color-inverse_text);
+  width: 50px;
+}
+
+@media (max-width: 1023px) {
+  .sticky_socials {
+    display: none;
+  }
+}

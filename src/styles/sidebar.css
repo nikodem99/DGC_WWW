@@ -1,0 +1,261 @@
+/* ==========================================================================
+   Sidebar Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Content + Sidebar Layout
+   -------------------------------------------------------------------------- */
+.page_content_wrap .content_wrap.content_wrap_with_sidebar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+.sidebar {
+  width: var(--theme-var-sidebar_width);
+  flex-shrink: 0;
+}
+
+.sidebar.right {
+  order: 2;
+  margin-left: var(--theme-var-sidebar_gap_width);
+}
+
+.sidebar.left {
+  order: 0;
+  margin-right: var(--theme-var-sidebar_gap_width);
+}
+
+.sidebar_inner {
+  position: relative;
+}
+
+
+/* --------------------------------------------------------------------------
+   Widgets (general)
+   -------------------------------------------------------------------------- */
+.widget {
+  margin-bottom: 2.5em;
+  padding-bottom: 2.5em;
+  border-bottom: 1px solid var(--theme-color-bd_color);
+}
+
+.widget:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.widget_title {
+  font-family: var(--theme-font-h_font-family);
+  font-size: var(--theme-font-h5_font-size);
+  font-weight: var(--theme-font-h_font-weight);
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-color-text_dark);
+  position: relative;
+  padding-bottom: 0.75em;
+}
+
+.widget_title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Search Widget
+   -------------------------------------------------------------------------- */
+.widget_search .search_form {
+  display: flex;
+  position: relative;
+}
+
+.widget_search .search_field {
+  flex: 1;
+  padding: 0.8em 3em 0.8em 1em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: 0.9em;
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.widget_search .search_field:focus {
+  border-color: var(--theme-color-text_link);
+}
+
+.widget_search .search_submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2.5em;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--theme-color-text_light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.widget_search .search_submit:hover {
+  color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Categories Widget
+   -------------------------------------------------------------------------- */
+.widget_categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget_categories li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--theme-color-alter_bg_color);
+}
+
+.widget_categories li:last-child {
+  border-bottom: none;
+}
+
+.widget_categories a {
+  color: var(--theme-color-text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.widget_categories a:hover {
+  color: var(--theme-color-text_link);
+}
+
+.widget_categories .count {
+  float: right;
+  font-size: 0.85em;
+  color: var(--theme-color-text_light);
+}
+
+
+/* --------------------------------------------------------------------------
+   Recent Posts Widget
+   -------------------------------------------------------------------------- */
+.widget_recent_posts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget_recent_posts li {
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--theme-color-alter_bg_color);
+  line-height: 1.4;
+}
+
+.widget_recent_posts li:last-child {
+  border-bottom: none;
+}
+
+.widget_recent_posts a {
+  color: var(--theme-color-text_dark);
+  font-weight: 500;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.widget_recent_posts a:hover {
+  color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Tags Cloud Widget
+   -------------------------------------------------------------------------- */
+.widget_tag_cloud .tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.tag-cloud-link {
+  display: inline-block;
+  padding: 0.3em 0.75em;
+  font-size: 0.8em;
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-alter_bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  transition: all 0.3s ease;
+}
+
+.tag-cloud-link:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   About Widget
+   -------------------------------------------------------------------------- */
+.widget_about p {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: var(--theme-color-text);
+}
+
+
+/* --------------------------------------------------------------------------
+   Sidebar Control (mobile toggle)
+   -------------------------------------------------------------------------- */
+.sidebar_control {
+  display: none;
+  padding: 0.8em 1.5em;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--theme-color-text_dark);
+  background-color: var(--theme-color-alter_bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+.sidebar_control:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Sidebar Below (for mobile, hidden by default)
+   -------------------------------------------------------------------------- */
+.sidebar_below {
+  /* Default state, shown on desktop */
+}

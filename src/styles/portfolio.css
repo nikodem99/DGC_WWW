@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Portfolio Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Portfolio Grid Wrap
+   -------------------------------------------------------------------------- */
+.portfolio_wrap {
+  position: relative;
+}
+
+.portfolio_wrap .columns_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.portfolio_wrap .columns_wrap.sc_item_columns_1 .post_item_portfolio {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.portfolio_wrap .columns_wrap.sc_item_columns_2 .post_item_portfolio {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.portfolio_wrap .columns_wrap.sc_item_columns_3 .post_item_portfolio {
+  width: 33.333%;
+  padding: 0 15px;
+}
+
+.portfolio_wrap .columns_wrap.sc_item_columns_4 .post_item_portfolio {
+  width: 25%;
+  padding: 0 15px;
+}
+
+/* --------------------------------------------------------------------------
+   Portfolio Card (Default)
+   -------------------------------------------------------------------------- */
+.post_item_portfolio {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.post_item_portfolio .post_featured {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.post_item_portfolio .post_featured_image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.post_item_portfolio:hover .post_featured_image {
+  transform: scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   Portfolio Overlay
+   -------------------------------------------------------------------------- */
+.post_item_portfolio .post_featured_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  z-index: 1;
+}
+
+.post_item_portfolio:hover .post_featured_overlay {
+  opacity: 1;
+}
+
+.post_item_portfolio .post_featured_overlay_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
+  font-family: var(--theme-font-h_font-family, 'Poppins', sans-serif);
+}
+
+.post_item_portfolio:hover .post_featured_overlay_title {
+  transform: translateY(0);
+}
+
+.post_item_portfolio .post_featured_overlay_title a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.post_item_portfolio .post_featured_overlay_title a:hover {
+  color: var(--theme-color-text_link, #e1a13a);
+}
+
+.post_item_portfolio .post_featured_overlay_cats {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(10px);
+  transition: transform 0.4s ease 0.05s;
+}
+
+.post_item_portfolio:hover .post_featured_overlay_cats {
+  transform: translateY(0);
+}
+
+.post_item_portfolio .post_featured_overlay_cats a {
+  color: var(--theme-color-text_link, #e1a13a);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Portfolio Info (below image)
+   -------------------------------------------------------------------------- */
+.post_item_portfolio .post_info {
+  padding: 20px 0 0;
+}
+
+.post_item_portfolio .post_info .post_title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  font-family: var(--theme-font-h_font-family, 'Poppins', sans-serif);
+}
+
+.post_item_portfolio .post_info .post_title a {
+  color: var(--theme-color-text_dark, #15212d);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post_item_portfolio .post_info .post_title a:hover {
+  color: var(--theme-color-text_link, #e1a13a);
+}
+
+.post_item_portfolio .post_info .post_categories {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--theme-color-text_light, #a8abae);
+}
+
+.post_item_portfolio .post_info .post_categories a {
+  color: var(--theme-color-text_link, #e1a13a);
+  text-decoration: none;
+}
+
+.post_item_portfolio .post_info .post_excerpt {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--theme-color-text, #797c7f);
+}
+
+/* --------------------------------------------------------------------------
+   Category Labels
+   -------------------------------------------------------------------------- */
+.post_item_portfolio .post_category_label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--theme-color-text_link, #e1a13a);
+  color: var(--theme-color-inverse_text, #ffffff);
+  border-radius: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Layout: Band
+   -------------------------------------------------------------------------- */
+.post_item_portfolio.layout_band {
+  display: flex;
+  align-items: stretch;
+  background-color: var(--theme-color-alter_bg_color, #ffffff);
+  border: 1px solid var(--theme-color-bd_color, #dddede);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.post_item_portfolio.layout_band .post_featured {
+  width: 40%;
+  flex-shrink: 0;
+  border-radius: 0;
+}
+
+.post_item_portfolio.layout_band .post_featured_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post_item_portfolio.layout_band .post_info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post_item_portfolio.layout_band .post_info .post_title {
+  font-size: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   Layout: Eclipse
+   -------------------------------------------------------------------------- */
+.post_item_portfolio.layout_eclipse .post_featured {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+
+.post_item_portfolio.layout_eclipse .post_featured_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post_item_portfolio.layout_eclipse .post_info {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Layout: Fill
+   -------------------------------------------------------------------------- */
+.post_item_portfolio.layout_fill {
+  min-height: 350px;
+}
+
+.post_item_portfolio.layout_fill .post_featured {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+}
+
+.post_item_portfolio.layout_fill .post_featured_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post_item_portfolio.layout_fill .post_featured_overlay {
+  opacity: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.post_item_portfolio.layout_fill .post_info {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Layout: Simple
+   -------------------------------------------------------------------------- */
+.post_item_portfolio.layout_simple .post_featured {
+  border-radius: 0;
+}
+
+.post_item_portfolio.layout_simple .post_featured_overlay {
+  display: none;
+}
+
+.post_item_portfolio.layout_simple .post_info {
+  padding: 15px 0 0;
+}
+
+.post_item_portfolio.layout_simple .post_info .post_title {
+  font-size: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Portfolio Filter
+   -------------------------------------------------------------------------- */
+.portfolio_filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.portfolio_filters .portfolio_filter_item {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--theme-color-text, #797c7f);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.portfolio_filters .portfolio_filter_item:hover,
+.portfolio_filters .portfolio_filter_item.active {
+  color: var(--theme-color-inverse_text, #ffffff);
+  background-color: var(--theme-color-text_link, #e1a13a);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Scheme Overrides
+   -------------------------------------------------------------------------- */
+.scheme_dark .post_item_portfolio .post_info .post_title a {
+  color: var(--theme-color-extra_dark, #ffffff);
+}
+
+.scheme_dark .post_item_portfolio.layout_band {
+  background-color: var(--theme-color-extra_bg_color, #15212d);
+  border-color: var(--theme-color-extra_bd_color, #2e3e4c);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .portfolio_wrap .columns_wrap.sc_item_columns_4 .post_item_portfolio {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio_wrap .columns_wrap.sc_item_columns_4 .post_item_portfolio,
+  .portfolio_wrap .columns_wrap.sc_item_columns_3 .post_item_portfolio,
+  .portfolio_wrap .columns_wrap.sc_item_columns_2 .post_item_portfolio {
+    width: 100%;
+  }
+
+  .post_item_portfolio.layout_band {
+    flex-direction: column;
+  }
+
+  .post_item_portfolio.layout_band .post_featured {
+    width: 100%;
+  }
+
+  .post_item_portfolio.layout_eclipse .post_featured {
+    width: 150px;
+    height: 150px;
+  }
+}

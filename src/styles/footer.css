@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Footer Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Footer Wrap
+   -------------------------------------------------------------------------- */
+.footer_wrap {
+  background-color: var(--theme-color-extra_bg_color);
+  color: var(--theme-color-extra_text);
+}
+
+.footer_wrap a {
+  color: var(--theme-color-extra_link);
+}
+
+.footer_wrap a:hover {
+  color: var(--theme-color-extra_hover);
+}
+
+.footer_default {
+  /* Default footer layout */
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer Widgets
+   -------------------------------------------------------------------------- */
+.footer_widgets_wrap {
+  padding: 4em 0;
+}
+
+.footer_widgets_inner {
+  /* Inner container */
+}
+
+.footer_widgets_wrap .widget {
+  margin-bottom: 2em;
+}
+
+.footer_widgets_wrap .widget:last-child {
+  margin-bottom: 0;
+}
+
+.footer_widgets_wrap .widget_title {
+  color: var(--theme-color-inverse_text);
+  font-size: var(--theme-font-h5_font-size);
+  font-weight: var(--theme-font-h_font-weight);
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.footer_widgets_wrap .widget_text {
+  font-size: 0.95em;
+  line-height: 1.8em;
+}
+
+.footer_widgets_wrap .widget_text p {
+  margin-bottom: 1em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer Widget Lists
+   -------------------------------------------------------------------------- */
+.footer_widgets_wrap .widget_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_widgets_wrap .widget_list li {
+  padding: 0.4em 0;
+  border-bottom: 1px solid var(--theme-color-extra_bd_color);
+}
+
+.footer_widgets_wrap .widget_list li:last-child {
+  border-bottom: none;
+}
+
+.footer_widgets_wrap .widget_list a {
+  color: var(--theme-color-extra_text);
+  transition: color 0.3s ease;
+}
+
+.footer_widgets_wrap .widget_list a:hover {
+  color: var(--theme-color-extra_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer Contact Widget
+   -------------------------------------------------------------------------- */
+.footer_widgets_wrap .widget_contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_widgets_wrap .widget_contacts_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75em;
+  padding: 0.5em 0;
+}
+
+.footer_widgets_wrap .widget_contacts_item span:first-child {
+  flex-shrink: 0;
+  width: 1.2em;
+  text-align: center;
+  color: var(--theme-color-extra_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer Logo
+   -------------------------------------------------------------------------- */
+.footer_logo_wrap {
+  text-align: center;
+  padding: 2em 0;
+  border-top: 1px solid var(--theme-color-extra_bd_color);
+}
+
+.footer_logo_inner {
+  display: inline-block;
+}
+
+.footer_logo_wrap .logo_footer_image {
+  max-height: 50px;
+  width: auto;
+}
+
+.footer_logo_wrap .logo_footer_text {
+  font-size: var(--theme-font-h4_font-size);
+  margin: 0;
+}
+
+.footer_logo_wrap .logo_footer_text a {
+  color: var(--theme-color-inverse_text);
+}
+
+.footer_logo_wrap .logo_footer_text a:hover {
+  color: var(--theme-color-extra_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer Socials
+   -------------------------------------------------------------------------- */
+.footer_socials_wrap {
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+.footer_socials_inner {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_socials_wrap .social_item {
+  display: inline-flex;
+}
+
+.footer_socials_wrap .social_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  color: var(--theme-color-extra_text);
+  border: 1px solid var(--theme-color-extra_bd_color);
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.footer_socials_wrap .social_icon:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-extra_link);
+  border-color: var(--theme-color-extra_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer Copyright
+   -------------------------------------------------------------------------- */
+.footer_copyright_wrap {
+  border-top: 1px solid var(--theme-color-extra_bd_color);
+  padding: 1.5em 0;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.footer_copyright_inner {
+  /* Inner wrapper */
+}
+
+.copyright_text {
+  color: var(--theme-color-extra_text);
+}
+
+.copyright_text a {
+  color: var(--theme-color-extra_link);
+}
+
+.copyright_text a:hover {
+  color: var(--theme-color-extra_hover);
+}

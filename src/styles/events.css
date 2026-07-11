@@ -1,0 +1,349 @@
+/* ==========================================================================
+   Events Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Events Grid
+   -------------------------------------------------------------------------- */
+.sc_events {
+  position: relative;
+}
+
+.sc_events_columns_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.sc_events_columns_wrap.sc_item_columns_1 .sc_events_item {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.sc_events_columns_wrap.sc_item_columns_2 .sc_events_item {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.sc_events_columns_wrap.sc_item_columns_3 .sc_events_item {
+  width: 33.333%;
+  padding: 0 15px;
+}
+
+.sc_events_columns_wrap.sc_item_columns_4 .sc_events_item {
+  width: 25%;
+  padding: 0 15px;
+}
+
+/* --------------------------------------------------------------------------
+   Event Card
+   -------------------------------------------------------------------------- */
+.sc_events_item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.sc_events_item_thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+
+.sc_events_item_thumb_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.sc_events_item:hover .sc_events_item_thumb_img {
+  transform: scale(1.05);
+}
+
+.sc_events_item_info {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--theme-color-alter_bg_color, #ffffff);
+  border: 1px solid var(--theme-color-bd_color, #dddede);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  padding: 20px;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Date Badge
+   -------------------------------------------------------------------------- */
+.sc_events_item_date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  background-color: var(--theme-color-text_link, #e1a13a);
+  color: var(--theme-color-inverse_text, #ffffff);
+  border-radius: 4px;
+  margin-right: 20px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+}
+
+.sc_events_item_date_day {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--theme-font-h_font-family, 'Poppins', sans-serif);
+}
+
+.sc_events_item_date_month {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Event Content
+   -------------------------------------------------------------------------- */
+.sc_events_item_content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sc_events_item_title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  font-family: var(--theme-font-h_font-family, 'Poppins', sans-serif);
+}
+
+.sc_events_item_title a {
+  color: var(--theme-color-text_dark, #15212d);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sc_events_item_title a:hover {
+  color: var(--theme-color-text_link, #e1a13a);
+}
+
+/* --------------------------------------------------------------------------
+   Event Meta
+   -------------------------------------------------------------------------- */
+.sc_events_item_meta {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--theme-color-text_light, #a8abae);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.sc_events_item_meta:last-child {
+  margin-bottom: 0;
+}
+
+.sc_events_item_meta_icon {
+  margin-right: 8px;
+  font-size: 14px;
+  color: var(--theme-color-text_link, #e1a13a);
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sc_events_item_meta_value {
+  color: var(--theme-color-text, #797c7f);
+}
+
+/* --------------------------------------------------------------------------
+   Single Event Details
+   -------------------------------------------------------------------------- */
+.post_item_event .post_header {
+  margin-bottom: 30px;
+}
+
+.post_item_event .post_title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: var(--theme-font-h_font-family, 'Poppins', sans-serif);
+  color: var(--theme-color-text_dark, #15212d);
+}
+
+.sc_events_item_details {
+  background-color: var(--theme-color-alter_bg_color, #ffffff);
+  border: 1px solid var(--theme-color-bd_color, #dddede);
+  border-radius: 4px;
+  padding: 30px;
+  margin: 30px 0;
+}
+
+.sc_events_item_details_inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sc_events_item_detail {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  flex: 1;
+}
+
+.sc_events_item_detail_icon {
+  font-size: 18px;
+  color: var(--theme-color-text_link, #e1a13a);
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sc_events_item_detail_label {
+  font-weight: 600;
+  color: var(--theme-color-text_dark, #15212d);
+  margin-right: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.sc_events_item_detail_value {
+  font-size: 14px;
+  color: var(--theme-color-text, #797c7f);
+}
+
+/* --------------------------------------------------------------------------
+   Event Content
+   -------------------------------------------------------------------------- */
+.post_item_event .post_content {
+  margin: 30px 0;
+}
+
+.post_item_event .post_content_description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--theme-color-text, #797c7f);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--theme-color-bd_color, #dddede);
+}
+
+.post_item_event .post_content_inner {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--theme-color-text, #797c7f);
+}
+
+.post_item_event .post_content_inner p {
+  margin-bottom: 1.5em;
+}
+
+/* --------------------------------------------------------------------------
+   Event Actions
+   -------------------------------------------------------------------------- */
+.sc_events_item_actions {
+  margin: 30px 0;
+  padding-top: 30px;
+  border-top: 1px solid var(--theme-color-bd_color, #dddede);
+}
+
+.sc_events_item_actions .sc_button {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.sc_events_item_actions .sc_button_default {
+  background-color: var(--theme-color-text_link, #e1a13a);
+  color: var(--theme-color-inverse_text, #ffffff);
+  border: 2px solid var(--theme-color-text_link, #e1a13a);
+}
+
+.sc_events_item_actions .sc_button_default:hover {
+  background-color: var(--theme-color-text_hover, #c48a2d);
+  border-color: var(--theme-color-text_hover, #c48a2d);
+}
+
+/* --------------------------------------------------------------------------
+   Related Events
+   -------------------------------------------------------------------------- */
+.related_events {
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid var(--theme-color-bd_color, #dddede);
+}
+
+.related_events .related_wrap_title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--theme-color-text_dark, #15212d);
+  font-family: var(--theme-font-h_font-family, 'Poppins', sans-serif);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Scheme Overrides
+   -------------------------------------------------------------------------- */
+.scheme_dark .sc_events_item_info {
+  background-color: var(--theme-color-extra_bg_color, #15212d);
+  border-color: var(--theme-color-extra_bd_color, #2e3e4c);
+}
+
+.scheme_dark .sc_events_item_title a {
+  color: var(--theme-color-extra_dark, #ffffff);
+}
+
+.scheme_dark .sc_events_item_details {
+  background-color: var(--theme-color-extra_bg_color, #15212d);
+  border-color: var(--theme-color-extra_bd_color, #2e3e4c);
+}
+
+.scheme_dark .sc_events_item_detail_label {
+  color: var(--theme-color-extra_dark, #ffffff);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .sc_events_columns_wrap.sc_item_columns_4 .sc_events_item {
+    width: 50%;
+  }
+
+  .sc_events_columns_wrap.sc_item_columns_3 .sc_events_item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sc_events_columns_wrap.sc_item_columns_4 .sc_events_item,
+  .sc_events_columns_wrap.sc_item_columns_3 .sc_events_item,
+  .sc_events_columns_wrap.sc_item_columns_2 .sc_events_item {
+    width: 100%;
+  }
+
+  .sc_events_item_details_inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sc_events_item_detail {
+    min-width: auto;
+  }
+
+  .post_item_event .post_title {
+    font-size: 26px;
+  }
+}

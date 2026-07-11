@@ -1,0 +1,585 @@
+/* ==========================================================================
+   Front Page Section Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Front Page Section (base)
+   -------------------------------------------------------------------------- */
+.front_page_section {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.front_page_section_inner {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Padding Variants
+   -------------------------------------------------------------------------- */
+.front_page_section_paddings_none {
+  padding: 0;
+}
+
+.front_page_section_paddings_none .front_page_section_inner {
+  padding: 0;
+}
+
+.front_page_section_paddings_small {
+  /* Outer padding handled via inner */
+}
+
+.front_page_section_paddings_small .front_page_section_inner {
+  padding: 2em 0;
+}
+
+.front_page_section_paddings_medium {
+  /* Outer padding handled via inner */
+}
+
+.front_page_section_paddings_medium .front_page_section_inner {
+  padding: 4em 0;
+}
+
+.front_page_section_paddings_large {
+  /* Outer padding handled via inner */
+}
+
+.front_page_section_paddings_large .front_page_section_inner {
+  padding: 6em 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Fullheight Section
+   -------------------------------------------------------------------------- */
+.front_page_section_fullheight .front_page_section_inner {
+  min-height: 100vh;
+}
+
+.gross-full-height {
+  min-height: 100vh;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Flex Layout
+   -------------------------------------------------------------------------- */
+.sc_layouts_flex {
+  display: flex;
+}
+
+.sc_layouts_columns_middle {
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Content Wrap
+   -------------------------------------------------------------------------- */
+.front_page_section_content_wrap {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Caption (Title)
+   -------------------------------------------------------------------------- */
+.front_page_section_caption {
+  font-size: var(--theme-font-h1_font-size);
+  color: inherit;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+/* Smaller caption for non-title sections */
+.front_page_section_about_caption,
+.front_page_section_features_caption {
+  font-size: var(--theme-font-h2_font-size);
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Description
+   -------------------------------------------------------------------------- */
+.front_page_section_description {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 2em;
+  line-height: 1.7;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.front_page_section_title_description {
+  text-align: center;
+}
+
+.front_page_section_about_description,
+.front_page_section_features_description {
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Buttons
+   -------------------------------------------------------------------------- */
+.front_page_section_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.front_page_section_title_buttons {
+  margin-top: 1em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Section Content (inner HTML)
+   -------------------------------------------------------------------------- */
+.front_page_section_content {
+  line-height: var(--theme-font-p_line-height);
+}
+
+
+/* --------------------------------------------------------------------------
+   Dark Scheme Sections (white text)
+   -------------------------------------------------------------------------- */
+.front_page_section.scheme_dark {
+  color: var(--theme-color-extra_text);
+}
+
+.front_page_section.scheme_dark .front_page_section_caption {
+  color: var(--theme-color-inverse_text);
+}
+
+.front_page_section.scheme_dark .front_page_section_description {
+  color: var(--theme-color-inverse_light);
+}
+
+.front_page_section.scheme_dark a {
+  color: var(--theme-color-extra_link);
+}
+
+.front_page_section.scheme_dark a:hover {
+  color: var(--theme-color-extra_hover);
+}
+
+
+/* --------------------------------------------------------------------------
+   Title Section (hero / banner)
+   -------------------------------------------------------------------------- */
+.front_page_section_title {
+  text-align: center;
+}
+
+.front_page_section_title_content_wrap {
+  text-align: center;
+}
+
+.front_page_section_title_caption {
+  font-size: var(--theme-font-h1_font-size);
+}
+
+
+/* --------------------------------------------------------------------------
+   About Section
+   -------------------------------------------------------------------------- */
+.front_page_section_about_content_wrap {
+  text-align: center;
+}
+
+.front_page_section_about_content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+/* --------------------------------------------------------------------------
+   Services / Features Grid
+   -------------------------------------------------------------------------- */
+.sc_services {
+  /* Inherits columns_wrap flex */
+}
+
+.sc_services_item {
+  padding: 0 15px;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.sc_services_item_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5em;
+  font-size: 2em;
+  color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.sc_services_item:hover .sc_services_item_icon {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+}
+
+.sc_services_item_title {
+  font-size: var(--theme-font-h4_font-size);
+  margin-bottom: 0.75em;
+}
+
+.sc_services_item_description {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: var(--theme-color-text);
+}
+
+/* Dark scheme overrides for services */
+.scheme_dark .sc_services_item_icon {
+  color: var(--theme-color-extra_link);
+  border-color: var(--theme-color-extra_link);
+}
+
+.scheme_dark .sc_services_item:hover .sc_services_item_icon {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-extra_link);
+}
+
+.scheme_dark .sc_services_item_title {
+  color: var(--theme-color-inverse_text);
+}
+
+.scheme_dark .sc_services_item_description {
+  color: var(--theme-color-extra_text);
+}
+
+
+/* --------------------------------------------------------------------------
+   Team Grid
+   -------------------------------------------------------------------------- */
+.sc_team {
+  /* Inherits columns_wrap flex */
+}
+
+.sc_team_item {
+  padding: 0 15px;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.sc_team_item_thumb {
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+
+.sc_team_item_thumb img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sc_team_item:hover .sc_team_item_thumb img {
+  transform: scale(1.05);
+}
+
+.sc_team_item_title {
+  font-size: var(--theme-font-h5_font-size);
+  margin-bottom: 0.3em;
+}
+
+.sc_team_item_subtitle {
+  font-size: 0.85em;
+  color: var(--theme-color-text_link);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75em;
+}
+
+.sc_team_item_description {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--theme-color-text);
+}
+
+.sc_team_item_socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.sc_team_item_socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  color: var(--theme-color-text_light);
+  border: 1px solid var(--theme-color-bd_color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.sc_team_item_socials a:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Testimonials Cards
+   -------------------------------------------------------------------------- */
+.sc_testimonials {
+  position: relative;
+}
+
+.sc_testimonials_item {
+  padding: 2em;
+  margin-bottom: 2em;
+  background-color: var(--theme-color-bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  text-align: center;
+}
+
+.sc_testimonials_item_content {
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 1.5em;
+  color: var(--theme-color-text);
+  position: relative;
+}
+
+.sc_testimonials_item_content::before {
+  content: '\201C';
+  font-size: 3em;
+  line-height: 1;
+  color: var(--theme-color-text_link);
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.sc_testimonials_item_author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.sc_testimonials_item_author_avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sc_testimonials_item_author_avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sc_testimonials_item_author_name {
+  font-weight: var(--theme-font-h_font-weight);
+  color: var(--theme-color-text_dark);
+}
+
+.sc_testimonials_item_author_position {
+  font-size: 0.85em;
+  color: var(--theme-color-text_light);
+}
+
+/* Dark scheme testimonials */
+.scheme_dark .sc_testimonials_item {
+  background-color: rgba(255,255,255,0.05);
+  border-color: var(--theme-color-extra_bd_color);
+}
+
+.scheme_dark .sc_testimonials_item_content {
+  color: var(--theme-color-extra_text);
+}
+
+.scheme_dark .sc_testimonials_item_author_name {
+  color: var(--theme-color-inverse_text);
+}
+
+
+/* --------------------------------------------------------------------------
+   Contact Info
+   -------------------------------------------------------------------------- */
+.sc_contact_info {
+  text-align: center;
+}
+
+.sc_contact_info_item {
+  margin-bottom: 1.5em;
+}
+
+.sc_contact_info_item_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.75em;
+  font-size: 1.5em;
+  color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  border-radius: 50%;
+}
+
+.sc_contact_info_item_title {
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.sc_contact_info_item_value {
+  color: var(--theme-color-text_light);
+}
+
+
+/* --------------------------------------------------------------------------
+   Subscribe Form
+   -------------------------------------------------------------------------- */
+.sc_form_subscribe {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sc_form_subscribe .sc_form_field {
+  display: flex;
+  gap: 0;
+}
+
+.sc_form_subscribe input[type="email"] {
+  flex: 1;
+  padding: 0.9em 1.2em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: var(--theme-font-p_font-size);
+  border: 2px solid var(--theme-color-text_link);
+  border-right: none;
+  outline: none;
+  background: var(--theme-color-bg_color);
+  color: var(--theme-color-text);
+}
+
+.sc_form_subscribe button[type="submit"] {
+  padding: 0.9em 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sc_form_subscribe button[type="submit"]:hover {
+  background-color: var(--theme-color-text_hover);
+  border-color: var(--theme-color-text_hover);
+}
+
+/* Dark scheme subscribe form */
+.scheme_dark .sc_form_subscribe input[type="email"] {
+  background: transparent;
+  border-color: var(--theme-color-extra_bd_color);
+  color: var(--theme-color-inverse_text);
+}
+
+.scheme_dark .sc_form_subscribe input[type="email"]::placeholder {
+  color: var(--theme-color-extra_text);
+}
+
+
+/* --------------------------------------------------------------------------
+   Blog Section Cards (front page)
+   -------------------------------------------------------------------------- */
+.front_page_section .post_item {
+  background-color: var(--theme-color-bg_color);
+}
+
+.front_page_section .post_featured {
+  margin-bottom: 0;
+}
+
+.front_page_section .post_header {
+  padding: 1.5em;
+}
+
+.front_page_section .post_title {
+  font-size: var(--theme-font-h5_font-size);
+  margin-bottom: 0.5em;
+}
+
+.front_page_section .post_meta {
+  font-size: 0.8em;
+}
+
+.front_page_section .post_content_inner {
+  padding: 0 1.5em 1.5em;
+}
+
+/* Dark scheme blog cards */
+.scheme_dark .front_page_section .post_item {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.scheme_dark .front_page_section .post_title a {
+  color: var(--theme-color-inverse_text);
+}
+
+.scheme_dark .front_page_section .post_title a:hover {
+  color: var(--theme-color-extra_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Counter / Numbers Section
+   -------------------------------------------------------------------------- */
+.sc_counter {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.sc_counter_number {
+  font-family: var(--theme-font-h_font-family);
+  font-size: 3em;
+  font-weight: var(--theme-font-h_font-weight);
+  line-height: 1;
+  color: var(--theme-color-text_link);
+  margin-bottom: 0.3em;
+}
+
+.sc_counter_title {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-text_light);
+}
+
+.scheme_dark .sc_counter_number {
+  color: var(--theme-color-extra_link);
+}
+
+.scheme_dark .sc_counter_title {
+  color: var(--theme-color-extra_text);
+}

@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Comments Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Comments Wrap
+   -------------------------------------------------------------------------- */
+.comments_wrap {
+  margin-top: 3em;
+  position: relative;
+}
+
+.comments_wrap.opened {
+  /* Comments section is visible */
+}
+
+
+/* --------------------------------------------------------------------------
+   Comments List
+   -------------------------------------------------------------------------- */
+.comments_list_wrap {
+  margin-bottom: 3em;
+}
+
+.comments_list_title {
+  font-size: var(--theme-font-h3_font-size);
+  margin-bottom: 1.5em;
+}
+
+.comments_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Item
+   -------------------------------------------------------------------------- */
+.comment_item {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--theme-color-bd_color);
+}
+
+.comment_item:first-child {
+  padding-top: 0;
+}
+
+.comment_item:last-child {
+  border-bottom: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Body
+   -------------------------------------------------------------------------- */
+.comment_body {
+  display: flex;
+  gap: 1.5em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Avatar
+   -------------------------------------------------------------------------- */
+.comment_author_avatar {
+  flex-shrink: 0;
+}
+
+.comment_author_avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Content
+   -------------------------------------------------------------------------- */
+.comment_content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Info (author + date)
+   -------------------------------------------------------------------------- */
+.comment_info {
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.comment_author {
+  font-weight: 700;
+  font-size: var(--theme-font-h6_font-size);
+  margin: 0;
+}
+
+.comment_author a {
+  color: var(--theme-color-text_dark);
+}
+
+.comment_author a:hover {
+  color: var(--theme-color-text_link);
+}
+
+.comment_posted {
+  font-size: 0.85em;
+  color: var(--theme-color-text_light);
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.comment_date,
+.comment_time {
+  display: inline;
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Author Badge
+   -------------------------------------------------------------------------- */
+.comment_bypostauthor {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-radius: calc(3px * var(--theme-var-rad_koef));
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Text
+   -------------------------------------------------------------------------- */
+.comment_text_wrap {
+  margin: 0.75em 0;
+}
+
+.comment_text {
+  line-height: var(--theme-font-p_line-height);
+  color: var(--theme-color-text);
+}
+
+.comment_text p {
+  margin-bottom: 0.75em;
+}
+
+.comment_text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Footer (reply)
+   -------------------------------------------------------------------------- */
+.comment_footer {
+  margin-top: 0.5em;
+}
+
+.comment_reply button {
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--theme-color-text_link);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.comment_reply button:hover {
+  color: var(--theme-color-text_hover);
+}
+
+
+/* --------------------------------------------------------------------------
+   Nested Comments (children)
+   -------------------------------------------------------------------------- */
+.children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 3em;
+}
+
+.children .comment_item {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--theme-color-bd_color);
+}
+
+.children .comment_item:last-child {
+  border-bottom: none;
+}
+
+.children .comment_author_avatar img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Deeper nesting (3rd level+) - narrower avatars */
+.children .children .comment_author_avatar img {
+  width: 50px;
+  height: 50px;
+}
+
+
+/* --------------------------------------------------------------------------
+   Comment Form
+   -------------------------------------------------------------------------- */
+.comments_form_wrap {
+  margin-top: 2em;
+}
+
+.comments_form {
+  position: relative;
+}
+
+.comments_form_title {
+  font-size: var(--theme-font-h3_font-size);
+  margin-bottom: 1.5em;
+}
+
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.comment-form-author,
+.comment-form-email {
+  flex: 1;
+  min-width: 200px;
+}
+
+.comment-form-comment {
+  width: 100%;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"] {
+  width: 100%;
+  padding: 0.8em 1em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: var(--theme-font-p_font-size);
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus {
+  border-color: var(--theme-color-text_link);
+}
+
+.comment-form textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 0.8em 1em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: var(--theme-font-p_font-size);
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+  border-color: var(--theme-color-text_link);
+}
+
+.form-submit {
+  width: 100%;
+}
+
+.form-submit button,
+.form-submit input[type="submit"],
+#send_comment {
+  display: inline-block;
+  padding: 0.9em 2.5em;
+  font-family: var(--theme-font-p_font-family);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-submit button:hover,
+.form-submit input[type="submit"]:hover,
+#send_comment:hover {
+  background-color: var(--theme-color-text_hover);
+  border-color: var(--theme-color-text_hover);
+}
+
+
+/* --------------------------------------------------------------------------
+   Show/Hide Comments Button
+   -------------------------------------------------------------------------- */
+.show_comments_single {
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--theme-color-text_dark);
+  background-color: var(--theme-color-alter_bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2em;
+}
+
+.show_comments_single:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}

@@ -1,0 +1,47 @@
+/* Animate on Scroll */
+.aos_item {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform;
+}
+
+.aos_item.aos_animated {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animation variants */
+.aos_fadeIn { /* just opacity, no transform needed */ }
+.aos_fadeInUp { transform: translateY(40px); }
+.aos_fadeInDown { transform: translateY(-40px); }
+.aos_fadeInLeft { transform: translateX(-40px); }
+.aos_fadeInRight { transform: translateX(40px); }
+.aos_zoomIn { transform: scale(0.9); }
+.aos_slideUp { transform: translateY(60px); }
+
+/* Parallax */
+.parallax_section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax_overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.parallax_content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .aos_item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

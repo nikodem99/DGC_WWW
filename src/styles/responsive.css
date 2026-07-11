@@ -1,0 +1,425 @@
+/* ==========================================================================
+   Responsive Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large Desktops (max-width: 1679px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1679px) {
+  :root {
+    --theme-var-page: min(1290px, var(--theme-var-page_width, 1290px));
+  }
+
+  .nav-links-single.nav-links-fixed {
+    position: static;
+    opacity: 1;
+  }
+
+  .nav-links-single.nav-links-fixed .nav-links {
+    padding-top: 3em;
+    margin-top: 3em;
+    border-top: 1px solid var(--theme-color-bd_color, #ddd);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktops (max-width: 1439px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1439px) {
+  :root {
+    --theme-var-page: 1100px;
+    --theme-var-page_extra: 40px;
+  }
+
+  .page_content_wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .sc_layouts_menu_nav > li > a {
+    padding: 0.8em;
+  }
+
+  .sc_layouts_menu_nav > li li > a {
+    padding: 0.5em 1.6em;
+  }
+
+  .menu_mobile .menu_mobile_nav_area > ul > .menu-item > a {
+    font-size: 34px;
+  }
+
+  .front_page_section {
+    padding: 80px 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Desktops (max-width: 1279px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1279px) {
+  :root {
+    --theme-var-page: 1070px;
+  }
+
+  .page_content_wrap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .top_panel_title .sc_layouts_title_caption {
+    font-size: 3em;
+  }
+
+  .menu_mobile .menu_mobile_nav_area > ul > .menu-item > a {
+    font-size: 30px;
+  }
+
+  .front_page_section {
+    padding: 70px 0;
+  }
+
+  .sc_team .sc_team_item {
+    padding: 0 10px;
+  }
+
+  .sc_testimonials .sc_testimonials_item_content {
+    font-size: 1.1em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets Landscape (max-width: 1023px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  :root {
+    --theme-var-page: calc(100vw - 60px);
+  }
+
+  .sc_layouts_hide_on_tablet {
+    display: none !important;
+  }
+
+  .sc_layouts_show_on_tablet {
+    display: block !important;
+  }
+
+  .top_panel_navi {
+    display: none;
+  }
+
+  .sc_layouts_row_type_compact {
+    display: flex !important;
+  }
+
+  .page_content_wrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .content_wrap {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 60px;
+  }
+
+  .content {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .top_panel_title {
+    padding: 80px 0 60px;
+  }
+
+  .top_panel_title .sc_layouts_title_caption {
+    font-size: 2.5em;
+  }
+
+  .top_panel_title .breadcrumbs {
+    font-size: 0.9em;
+  }
+
+  .post_layout_classic .post_item {
+    width: 50% !important;
+  }
+
+  .post_layout_band .post_featured {
+    width: 40%;
+  }
+
+  .post_layout_band .post_content_inner {
+    width: 60%;
+  }
+
+  .footer_widgets_wrap .footer_widgets_inner {
+    flex-wrap: wrap;
+  }
+
+  .footer_widgets_wrap .widget_area {
+    width: 50% !important;
+    margin-bottom: 30px;
+  }
+
+  .front_page_section {
+    padding: 60px 0;
+  }
+
+  .front_page_section_about .content_wrap {
+    flex-direction: column;
+  }
+
+  .sc_team_columns_4 .sc_team_item {
+    width: 50%;
+  }
+
+  .comments_list_wrap .comment_body {
+    padding-left: 60px;
+  }
+
+  .comments_list_wrap .children {
+    padding-left: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets Portrait (max-width: 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --theme-var-page: calc(100vw - 40px);
+  }
+
+  .sc_layouts_hide_on_mobile {
+    display: none !important;
+  }
+
+  .sc_layouts_show_on_mobile {
+    display: block !important;
+  }
+
+  .page_content_wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .content_wrap {
+    padding: 0 20px;
+  }
+
+  .top_panel_title {
+    padding: 60px 0 40px;
+  }
+
+  .top_panel_title .sc_layouts_title_caption {
+    font-size: 2em;
+  }
+
+  .post_layout_classic .post_item {
+    width: 100% !important;
+  }
+
+  .post_layout_band {
+    flex-direction: column;
+  }
+
+  .post_layout_band .post_featured {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .post_layout_band .post_content_inner {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .post_item .post_title {
+    font-size: 1.4em;
+  }
+
+  .footer_widgets_wrap .widget_area {
+    width: 100% !important;
+  }
+
+  .footer_logo_wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer_logo_wrap .footer_logo_inner {
+    margin-bottom: 20px;
+  }
+
+  .footer_socials_wrap .socials_wrap {
+    justify-content: center;
+  }
+
+  .footer_copyright_wrap .copyright_text {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .front_page_section {
+    padding: 40px 0;
+  }
+
+  .front_page_section .sc_layouts_title_caption {
+    font-size: 2em;
+  }
+
+  .front_page_section .sc_layouts_title_description {
+    font-size: 1em;
+  }
+
+  .sc_team_columns_4 .sc_team_item,
+  .sc_team_columns_3 .sc_team_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .sc_features_columns_3 .sc_features_item,
+  .sc_features_columns_2 .sc_features_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .sc_testimonials .sc_testimonials_item {
+    padding: 25px;
+  }
+
+  .front_page_section_contacts .columns_wrap {
+    flex-direction: column;
+  }
+
+  .front_page_section_contacts .column-1_2 {
+    width: 100%;
+  }
+
+  .post_item_single .post_header {
+    margin-bottom: 1.5em;
+  }
+
+  .nav-links-single .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links-single .nav-previous,
+  .nav-links-single .nav-next {
+    width: 100%;
+  }
+
+  .related_wrap .columns_wrap {
+    flex-direction: column;
+  }
+
+  .related_wrap .column-1_3 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .comments_list_wrap .comment_body {
+    padding-left: 0;
+  }
+
+  .comments_list_wrap .comment_author_avatar {
+    display: none;
+  }
+
+  .comments_list_wrap .children {
+    padding-left: 15px;
+  }
+
+  .comments_form_wrap .comment-form {
+    flex-direction: column;
+  }
+
+  .comments_form_wrap .comment-form input[type="text"],
+  .comments_form_wrap .comment-form input[type="email"],
+  .comments_form_wrap .comment-form input[type="url"] {
+    width: 100%;
+  }
+
+  .nav-links .page-numbers {
+    min-width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 2px;
+  }
+
+  .post_item_404 .page_title {
+    font-size: 10em;
+  }
+
+  .post_item_404 .page_subtitle {
+    font-size: 1.5em;
+  }
+
+  .menu_mobile .menu_mobile_inner {
+    width: 85vw;
+  }
+
+  .menu_mobile .menu_mobile_nav_area > ul > .menu-item > a {
+    font-size: 24px;
+  }
+
+  .menu_mobile .menu_mobile_widgets_area {
+    display: none;
+  }
+
+  .search_style_fullscreen .search_wrap .search_field {
+    font-size: 2em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Phones (max-width: 479px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  :root {
+    --theme-var-page: calc(100vw - 30px);
+  }
+
+  .content_wrap {
+    padding: 0 15px;
+  }
+
+  .top_panel_title .sc_layouts_title_caption {
+    font-size: 1.6em;
+  }
+
+  .front_page_section .sc_layouts_title_caption {
+    font-size: 1.6em;
+  }
+
+  .front_page_section .sc_item_button a {
+    padding: 12px 30px;
+    font-size: 0.9em;
+  }
+
+  .post_item_404 .page_title {
+    font-size: 6em;
+  }
+
+  .post_item_404 .page_subtitle {
+    font-size: 1.2em;
+  }
+
+  .menu_mobile .menu_mobile_inner {
+    width: 100vw;
+  }
+
+  .search_style_fullscreen .search_wrap .search_field {
+    font-size: 1.5em;
+  }
+
+  .sc_testimonials .sc_testimonials_item_content {
+    font-size: 1em;
+  }
+}

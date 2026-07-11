@@ -1,0 +1,328 @@
+/* ==========================================================================
+   Blog Archive Styles - Gross Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Blog Archive Wrap
+   -------------------------------------------------------------------------- */
+.blog_archive_wrap {
+  position: relative;
+}
+
+.posts_container {
+  position: relative;
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Item (shared)
+   -------------------------------------------------------------------------- */
+.post_item {
+  margin-bottom: 3em;
+  position: relative;
+}
+
+.post_item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Featured Image
+   -------------------------------------------------------------------------- */
+.post_featured {
+  margin-bottom: 1.5em;
+  overflow: hidden;
+  position: relative;
+  line-height: 0;
+}
+
+.post_featured img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.post_featured:hover img {
+  transform: scale(1.05);
+}
+
+.post_featured a {
+  display: block;
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Header
+   -------------------------------------------------------------------------- */
+.post_header {
+  margin-bottom: 0.5em;
+}
+
+.post_title {
+  margin-bottom: 0.3em;
+}
+
+.post_title a {
+  color: var(--theme-color-text_dark);
+  transition: color 0.3s ease;
+}
+
+.post_title a:hover {
+  color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Meta
+   -------------------------------------------------------------------------- */
+.post_meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.2em;
+  align-items: center;
+  color: var(--theme-color-text_light);
+  font-size: 0.85em;
+  margin-bottom: 0.75em;
+}
+
+.post_meta_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.post_meta_item a {
+  color: var(--theme-color-text_light);
+}
+
+.post_meta_item a:hover {
+  color: var(--theme-color-text_link);
+}
+
+.post_meta_item.post_categories a {
+  color: var(--theme-color-text_link);
+}
+
+.post_meta_item.post_categories a:hover {
+  color: var(--theme-color-text_hover);
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Content
+   -------------------------------------------------------------------------- */
+.post_content {
+  position: relative;
+}
+
+.post_content_inner {
+  margin: 1em 0;
+  line-height: var(--theme-font-p_line-height);
+}
+
+.post_content_inner p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Sticky Label
+   -------------------------------------------------------------------------- */
+.label_sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: 0.3em 1em;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+}
+
+.post_label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Layout: Excerpt (default)
+   -------------------------------------------------------------------------- */
+.post_layout_excerpt {
+  padding-bottom: 3em;
+  border-bottom: 1px solid var(--theme-color-bd_color);
+}
+
+.post_layout_excerpt:last-child {
+  border-bottom: none;
+}
+
+.post_layout_excerpt .post_title {
+  font-size: var(--theme-font-h3_font-size);
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Layout: Classic (grid)
+   -------------------------------------------------------------------------- */
+.blog_style_classic .posts_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.post_layout_classic {
+  padding: 0 15px;
+  margin-bottom: 3em;
+}
+
+.post_layout_classic .post_title {
+  font-size: var(--theme-font-h4_font-size);
+}
+
+.post_layout_classic .post_content_inner {
+  font-size: 0.95em;
+}
+
+.post_layout_classic .post_featured {
+  margin-bottom: 1.2em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Layout: Band (image + content side by side)
+   -------------------------------------------------------------------------- */
+.post_layout_band {
+  padding-bottom: 3em;
+  border-bottom: 1px solid var(--theme-color-bd_color);
+}
+
+.post_layout_band:last-child {
+  border-bottom: none;
+}
+
+.post_layout_band .columns_wrap {
+  align-items: flex-start;
+}
+
+.post_layout_band .post_featured {
+  margin-bottom: 0;
+}
+
+.post_layout_band .post_title {
+  font-size: var(--theme-font-h4_font-size);
+}
+
+
+/* --------------------------------------------------------------------------
+   Post Format Variations
+   -------------------------------------------------------------------------- */
+.post_format_audio .post_featured,
+.post_format_video .post_featured {
+  position: relative;
+}
+
+.post_format_gallery .post_featured {
+  position: relative;
+}
+
+.post_format_quote .post_content_inner {
+  font-style: italic;
+  font-size: 1.1em;
+  border-left: 4px solid var(--theme-color-text_link);
+  padding-left: 1.5em;
+}
+
+.post_format_link .post_title a {
+  color: var(--theme-color-text_link);
+}
+
+.post_format_link .post_title a:hover {
+  color: var(--theme-color-text_hover);
+}
+
+
+/* --------------------------------------------------------------------------
+   More Link Button
+   -------------------------------------------------------------------------- */
+.post_content .more-link,
+.post_item .more-link {
+  display: inline-block;
+  padding: 0.7em 2em;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-color-text_link);
+  border: 2px solid var(--theme-color-text_link);
+  transition: all 0.3s ease;
+  margin-top: 0.5em;
+}
+
+.post_content .more-link:hover,
+.post_item .more-link:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+}
+
+
+/* --------------------------------------------------------------------------
+   Pagination
+   -------------------------------------------------------------------------- */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid var(--theme-color-bd_color);
+}
+
+.page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5em;
+  height: 2.5em;
+  padding: 0 0.75em;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--theme-color-text);
+  background-color: var(--theme-color-alter_bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  transition: all 0.3s ease;
+}
+
+a.page-numbers:hover {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}
+
+.page-numbers.current {
+  color: var(--theme-color-inverse_text);
+  background-color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link);
+}
+
+.page-numbers.prev,
+.page-numbers.next {
+  padding: 0 1.2em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+
+.page-numbers.dots {
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+}

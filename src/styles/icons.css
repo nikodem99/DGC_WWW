@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Icon System — CSS-based replacement for Fontello / Gross theme icon font
+   Uses Unicode characters via ::before pseudo-elements.
+   ========================================================================== */
+
+/* Base icon styles */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: never;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  font-family: 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Sans Symbols 2', 'Noto Sans Symbols', sans-serif;
+  font-size: inherit;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------------
+   Social Media Icons
+   --------------------------------------------------------------------------- */
+
+.icon-facebook::before   { content: '\f09a'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-twitter::before    { content: '\f099'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-instagram::before  { content: '\f16d'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-linkedin::before   { content: '\f0e1'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-youtube::before    { content: '\f167'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-pinterest::before  { content: '\f0d2'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-dribbble::before   { content: '\f17d'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+.icon-github::before     { content: '\f09b'; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif; }
+
+/* Social icon fallbacks using Unicode text (when Font Awesome is unavailable) */
+@supports not (font-family: 'Font Awesome 6 Brands') {
+  .icon-facebook::before   { content: 'f'; font-family: Georgia, serif; font-weight: bold; }
+  .icon-twitter::before    { content: '\1D54F'; font-family: 'Segoe UI Symbol', sans-serif; }
+  .icon-instagram::before  { content: '\1F4F7'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+  .icon-linkedin::before   { content: 'in'; font-family: Georgia, serif; font-weight: bold; font-size: 0.75em; }
+  .icon-youtube::before    { content: '\25B6'; font-family: 'Segoe UI Symbol', sans-serif; }
+  .icon-pinterest::before  { content: '\1F4CC'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+  .icon-dribbble::before   { content: '\26BE'; font-family: 'Segoe UI Symbol', sans-serif; }
+  .icon-github::before     { content: '\1F431'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+}
+
+/* ---------------------------------------------------------------------------
+   Navigation & UI Icons
+   --------------------------------------------------------------------------- */
+
+.icon-search::before      { content: '\1F50D'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-menu::before        { content: '\2630'; }
+.icon-close::before       { content: '\2715'; }
+.icon-cancel::before      { content: '\2715'; }
+.icon-check::before       { content: '\2713'; }
+.icon-ok::before          { content: '\2713'; }
+.icon-plus::before        { content: '\002B'; }
+.icon-minus::before       { content: '\2212'; }
+.icon-lock::before        { content: '\1F512'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Arrow & Chevron Icons
+   --------------------------------------------------------------------------- */
+
+.icon-arrow-left::before    { content: '\2190'; }
+.icon-arrow-right::before   { content: '\2192'; }
+.icon-arrow-down::before    { content: '\2193'; }
+.icon-arrow-up::before      { content: '\2191'; }
+.icon-chevron-left::before  { content: '\2039'; }
+.icon-chevron-right::before { content: '\203A'; }
+.icon-left-open::before     { content: '\2039'; }
+.icon-right-open::before    { content: '\203A'; }
+
+/* ---------------------------------------------------------------------------
+   Communication Icons
+   --------------------------------------------------------------------------- */
+
+.icon-phone::before       { content: '\260E'; }
+.icon-mail::before        { content: '\2709'; }
+.icon-comment::before     { content: '\1F4AC'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-share::before       { content: '\21AA'; }
+.icon-link::before        { content: '\1F517'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-globe::before       { content: '\1F310'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Content & Media Icons
+   --------------------------------------------------------------------------- */
+
+.icon-eye::before         { content: '\1F441'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-star-filled::before { content: '\2605'; }
+.icon-star::before        { content: '\2605'; }
+.icon-star-empty::before  { content: '\2606'; }
+.icon-heart::before       { content: '\2665'; }
+.icon-quote::before       { content: '\201C'; font-size: 1.4em; }
+.icon-play::before        { content: '\25B6'; }
+.icon-tag::before         { content: '\1F3F7'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-folder::before      { content: '\1F4C1'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-camera::before      { content: '\1F4F7'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-book::before        { content: '\1F4D6'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Time & Date Icons
+   --------------------------------------------------------------------------- */
+
+.icon-clock::before       { content: '\1F554'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-calendar::before    { content: '\1F4C5'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   People Icons
+   --------------------------------------------------------------------------- */
+
+.icon-user::before        { content: '\1F464'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-users::before       { content: '\1F465'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Location Icons
+   --------------------------------------------------------------------------- */
+
+.icon-location::before    { content: '\1F4CD'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-home::before        { content: '\1F3E0'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Commerce Icons
+   --------------------------------------------------------------------------- */
+
+.icon-cart::before        { content: '\1F6D2'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Tools & Tech Icons
+   --------------------------------------------------------------------------- */
+
+.icon-cog::before         { content: '\2699'; }
+.icon-pencil::before      { content: '\270E'; }
+.icon-code::before        { content: '\1F4BB'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-desktop::before     { content: '\1F5A5'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-mobile::before      { content: '\1F4F1'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-cloud::before       { content: '\2601'; }
+.icon-download::before    { content: '\2B07'; }
+.icon-upload::before      { content: '\2B06'; }
+
+/* ---------------------------------------------------------------------------
+   Business & Achievement Icons
+   --------------------------------------------------------------------------- */
+
+.icon-briefcase::before   { content: '\1F4BC'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-chart-bar::before   { content: '\1F4CA'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-trophy::before      { content: '\1F3C6'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-diamond::before     { content: '\1F48E'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+
+/* ---------------------------------------------------------------------------
+   Misc Icons
+   --------------------------------------------------------------------------- */
+
+.icon-lightbulb::before   { content: '\1F4A1'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-rocket::before      { content: '\1F680'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+.icon-shield::before      { content: '\1F6E1'; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
